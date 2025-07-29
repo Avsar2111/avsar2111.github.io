@@ -458,11 +458,19 @@
     <!-- Service End -->
 
 
-    <!-- Quote Start -->
-    <div class="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/contactusbanner.png">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
+            <!-- Quote Start -->
+    <div class="container-fluid quote my-5 py-5 position-relative overflow-hidden" style="height: /* your desired height, e.g. 75vh or custom px */;">
+  <!-- overlay for tint/opactiy -->
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5); z-index:1;"></div>
+  
+              <video class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover" autoplay muted loop playsinline poster="fallback.jpg" style="object-fit: cover; z-index:0;">
+                <source src="img/Contactusbanner.mp4" type="video/mp4">
+                <!-- optionally add webm or ogg sources -->
+              </video>
+
+           <div class="container py-5 position-relative" style="z-index:2;">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
                     <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
                         <h1 class="display-5 text-center mb-1">Contact Us</h1>
                         <h6 class="display-6 text-center mb-5">We’re just a message away</h6>
@@ -506,6 +514,7 @@
             </div>
         </div>
     </div>
+
     <!-- Quote End -->
 
 <!-- Gallery info area start -->
@@ -867,21 +876,21 @@
                     <h4 class="text-white mb-4">We’re Here For You</h4>
                     <p class="mb-2">
                         <i class="fa fa-map-marker-alt me-3"></i>
-                        Chikhodra Crossing, opp. Mahindra showroom,<br>
-                        Anand, Chikhodra, Gujarat 388320
+                        Chikhodra Crossing, opp. Mahindra showroom,
+                        Chikhodra, Gujarat 388320
                     </p>
                     <p class="mb-2">
                         <i class="fa fa-phone-alt me-3"></i>
-                        +012 345 67890
+                        +91 6351402132,+91 9825023094
                     </p>
                     <p class="mb-2">
                         <i class="fa fa-envelope me-3"></i>
-                        info@example.com
+                        avsrpartyplot@gmail.com
                     </p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
