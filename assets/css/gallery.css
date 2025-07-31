@@ -34,6 +34,106 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Scroll container */
+.scroll-container {
+
+  flex: 1 1 auto;  /* allow it to grow and shrink */
+  scroll-behavior: smooth;
+      display: flex;                    /* ADDED */
+  justify-content: center;   
+   overflow-x: hidden;
+  /* ✅ Hide scrollbar visually in Firefox */
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* IE/Edge */
+  padding-bottom: 20px;          /* Give room for scrollbar */
+  margin-bottom: -20px;          /* Pull content down to hide it */
+}
+
+
+
+.gallery-btn-slider-wrap {
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
+}
+
+
+.gallery-btn-slider-wrap::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.bd-gallery__button {
+  gap: 2px !important;
+  justify-content: center !important; /* Center items within */
+
+}
+
+/* Apply this class to all buttons */
+.bd-gallery__button button {
+  white-space: nowrap;
+  display: inline-block;
+  min-width: 100px;
+  font-size:    1rem;
+  padding: 8px 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-grid-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+ 
+}
+
+
+
+/* Medium (tablets) */
+@media (max-width: 991.98px) {
+  .bd-gallery__button button {
+    min-width: 90px;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .scroll-left,
+  .scroll-right {
+    font-size: 20px;
+    padding: 6px 10px;
+     background: transparent !important; /* Remove background */
+  border: none !important;            /* Remove border */
+  box-shadow: none !important;        /* Remove any shadow */
+  }
+}
+
+/* Small (phones) */
+@media (max-width: 767.98px) {
+  .bd-gallery__button button {
+    min-width: 80px;
+    font-size: 10px !important;
+    padding: 4px 8px !important;
+  }
+
+  .button-grid-container {
+    gap: 5px;
+    margin: 0.5rem 0;
+  }
+
+  .scroll-left,
+  .scroll-right {
+   height: 38px !important;
+    width: 3px !important;
+    font-size: 10px;
+    padding: 4px 8px;
+     background: transparent !important; /* Remove background */
+  border: none !important;            /* Remove border */
+  box-shadow: none !important;        /* Remove any shadow */
+  }
+}
+
+
 
 
 

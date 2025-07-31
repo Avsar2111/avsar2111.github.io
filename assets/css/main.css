@@ -225,12 +225,12 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     --dash-size: 15px;
     --gap-size: 10px;
     position: relative;
-    height: 60px;
+   
     background: transparent;
     display: inline-flex;
     border-radius: 6px;
     overflow: hidden;
-    padding: 0px 35px;
+   
     justify-content: space-evenly;
     align-items: center;
     font-size: 16px;

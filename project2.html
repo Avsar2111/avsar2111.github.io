@@ -15,7 +15,6 @@
    <link href="lib/fontawesome/css/all.min.css" rel="stylesheet">
    <link href="lib/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-   <link href="assets/css/gallery.css" rel="stylesheet">    
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -122,48 +121,18 @@
 <!-- Gallery info area start -->
 <div class="bd-trem__gallery pt-120 pb-90">
     <div class="container">
- <div class="button-grid-container">
-  <!-- Left Arrow -->
-  <div class="grid-item-l">
-    <button class="scroll-left btn btn-light">
-      <i class="fas fa-chevron-left"></i>
-    </button>
-  </div>
+        <div class="row">
+            <div class="bd-gallery__button p-relative mb-40">
+                <button class="active" data-filter="*">all overview</button>
+                <button data-filter=".c-1">farm house</button>
+                <button data-filter=".c-2">soil field</button>
+                <button data-filter=".c-3">grass field</button>
+                <button data-filter=".c-4">grass field</button>
+                <button data-filter=".c-5">organic food</button>
+            </div>
+        </div>
 
-  
-  <!-- Scrollable Button Container -->
-  <div class="scroll-container">
-    <div class="bd-gallery__button">
-      <button class="active me-2" data-filter="*">All Overview</button>
-      <button class="me-2" data-filter=".c-1">Farm House</button>
-      <button class="me-2" data-filter=".c-2">Soil Field</button>
-      <button class="me-2" data-filter=".c-3">Grass Field</button>
-      <button class="me-2" data-filter=".c-4">Grass Field</button>
-      <button class="me-2" data-filter=".c-5">Organic Food</button>
-      <button class="me-2" data-filter=".c-3">Grass Field</button>
-      <button class="me-2" data-filter=".c-4">Grass Field</button>
-      <button class="me-2" data-filter=".c-5">Organic Food</button>
-    </div>
-  </div>
-
-  <!-- Right Arrow -->
-  <div class="grid-item-r text-end">
-    <button class="scroll-right btn btn-light">
-      <i class="fas fa-chevron-right"></i>
-    </button>
-  </div>
-</div>
-
-
-        <hr>
         <div class="row grid gallery-grid-items">
-
-            <div class="gallery-nav">
-    <button id="prevBtn" class="slider-btn"><i class="fas fa-chevron-left"></i></button>
-    <button id="nextBtn" class="slider-btn"><i class="fas fa-chevron-right"></i></button>
-</div>
-
-
             <!-- Item 1 -->
             <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 grid-item c-2 c-3">
                 <div class="bd-singel__gallery-item mb-30">
@@ -307,14 +276,11 @@
                     </span>
                 </div>
             </div>
-
-
-
         </div>
 
     </div>
 </div>
-
+<!-- Gallery info area end -->
 
 
     <!-- Footer Start -->
@@ -412,8 +378,6 @@
     <script src="assets/js/ajax-form.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/gallery.js"></script>
-
-  
 </body>
 
 </html>
