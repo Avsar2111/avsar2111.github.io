@@ -34,6 +34,15 @@
    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/spacing.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <style>#confettiCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Push behind all content */
+    pointer-events: none; /* Allows clicking through */
+}</style>
 </head>
 
 <body>
@@ -249,40 +258,43 @@
 
    
     <!-- About Start -->
-    <div class="container-fluid" >
-        <div class="container">
-            <div class="row g-5 align-items-end">
-                <div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid rounded" data-wow-delay="0.1s" src="img/about.jpg">
-                </div>
-                <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="0.3s">
-                    <h1 class="display-1 text-primary mb-0">25</h1>
-                    <p class="text-primary mb-4">Year of Experience</p>
-                    <h1 class="display-5 mb-4">Transforming Celebrations into Cherished Memories</h1>
-                    <p class="mb-4">For 25 years, Avsar Party Plot in Anand has been at the heart of special occasions across Gujarat. Be it elegant weddings, family anniversaries, or milestone events—our lush gardens, refined halls, tailored décor, and seamless coordination turn your vision into reality.</p>
-                    <!--<a class="btn btn-primary py-3 px-4" href="">Explore More</a>-->
-                </div>
-                <div class="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="row g-5">
-                        <div class="col-12 col-sm-6 col-lg-12">
-                            <div class="border-start ps-4">
-                                <i class="fa fa-users fa-3x text-primary mb-3"></i>
-                                <h4 class="mb-3">Dedicated Team</h4>
-                                <span>Our skilled team brings personalized planning, custom design ideas, and day-of coordination to ensure your celebration flows beautifully.</span>
-                            </div>
+   <canvas id="confettiCanvas" style="position:fixed; top:0; left:0; z-index:-1;"></canvas>
+
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row g-5 align-items-end">
+            <div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+                <img class="img-fluid rounded" data-wow-delay="0.1s" src="img/about.jpg">
+            </div>
+            <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="0.3s">
+                <h1 class="display-1 text-primary mb-0">25</h1>
+                <p class="text-primary mb-4">Year of Experience</p>
+                <h1 class="display-5 mb-4">Transforming Celebrations into Cherished Memories</h1>
+                <p class="mb-4">For 25 years, Avsar Party Plot in Anand has been at the heart of special occasions across Gujarat. Be it elegant weddings, family anniversaries, or milestone events—our lush gardens, refined halls, tailored décor, and seamless coordination turn your vision into reality.</p>
+            </div>
+            <div class="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="row g-5">
+                    <div class="col-12 col-sm-6 col-lg-12">
+                        <div class="border-start ps-4">
+                            <i class="fa fa-users fa-3x text-primary mb-3"></i>
+                            <h4 class="mb-3">Dedicated Team</h4>
+                            <span>Our skilled team brings personalized planning, custom design ideas, and day-of coordination to ensure your celebration flows beautifully.</span>
                         </div>
-                          <div class="col-12 col-sm-6 col-lg-12">
-                            <div class="border-start ps-4">
-                                <i class="fa fa-users fa-3x text-primary mb-3"></i>
-                                <h4 class="mb-3">Heritage of Trust & Distinction </h4>
-                                <span>Decades of service excellence and satisfied clients—your happiness is our legacy.</span>
-                            </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-12">
+                        <div class="border-start ps-4">
+                            <i class="fa fa-users fa-3x text-primary mb-3"></i>
+                            <h4 class="mb-3">Heritage of Trust & Distinction</h4>
+                            <span>Decades of service excellence and satisfied clients—your happiness is our legacy.</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
     <!-- About End -->
 <!--</div>-->
 
@@ -964,6 +976,90 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
+<script>
+    const canvas = document.getElementById('confettiCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    // Preload icon images
+    const iconSources = [
+  'img/bgicons/balloons (1).png',        // 🎉
+  'img/bgicons/balloons.png',       // 🎂
+  'img/bgicons/confetti (1).png',        // 🎁
+  'img/bgicons/confetti (2).png',       // 🎈 (corrected)
+  'img/bgicons/confetti.png',          // 🔔 (corrected)
+  'img/bgicons/fireworks (1).png',    // 💟
+  'img/bgicons/fireworks.png',        // 🎊
+  'img/bgicons/gift-box.png',          // 🔔 (corrected)
+  'img/bgicons/party-hat.png',    // 💟
+  'img/bgicons/surprise.png' 
+];
+
+
+    const iconImages = [];
+    let loadedIcons = 0;
+
+    iconSources.forEach(src => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => {
+            loadedIcons++;
+            if (loadedIcons === iconSources.length) {
+                init(); // Start animation after all images are loaded
+            }
+        };
+        iconImages.push(img);
+    });
+
+    class ConfettiIcon {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+            this.size = 24;
+            this.speedY = Math.random() * 0.7 + 0.3;
+            this.opacity = Math.random() * 0.7 + 0.3;
+            this.icon = iconImages[Math.floor(Math.random() * iconImages.length)];
+        }
+
+        update() {
+            this.y += this.speedY;
+            if (this.y > canvas.height) {
+                this.y = -this.size;
+                this.x = Math.random() * canvas.width;
+                this.icon = iconImages[Math.floor(Math.random() * iconImages.length)];
+            }
+        }
+
+        draw() {
+            ctx.globalAlpha = this.opacity;
+            ctx.drawImage(this.icon, this.x, this.y, this.size, this.size);
+            ctx.globalAlpha = 1;
+        }
+    }
+
+    let icons = [];
+
+    function init() {
+        for (let i = 0; i < 100; i++) {
+            icons.push(new ConfettiIcon(Math.random() * canvas.width, Math.random() * canvas.height));
+        }
+        animate();
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        icons.forEach(icon => {
+            icon.update();
+            icon.draw();
+        });
+        requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+</script>
 
     <!-- JavaScript Libraries -->
 <script src="js/jquery-3.4.1.min.js"></script>
