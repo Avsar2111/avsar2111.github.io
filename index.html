@@ -34,15 +34,7 @@
    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/spacing.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <style>#confettiCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Push behind all content */
-    pointer-events: none; /* Allows clicking through */
-}</style>
+   
 </head>
 
 <body>
@@ -256,12 +248,11 @@
     </div>
     <!-- Top Feature End -->
 
-   
-    <!-- About Start -->
-   <canvas id="confettiCanvas" style="position:fixed; top:0; left:0; z-index:-1;"></canvas>
+   <!-- <div id="celebrationSection" style="position: relative;">
+    <canvas id="confettiCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></canvas> -->
 
 
-<div class="container-fluid">
+<div class="container-fluid" style="position: relative; z-index: 1";>
     <div class="container">
         <div class="row g-5 align-items-end">
             <div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -293,8 +284,8 @@
             </div>
         </div>
     </div>
-</div>
-
+<!-- </div>
+</div> -->
     <!-- About End -->
 <!--</div>-->
 
@@ -977,35 +968,43 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 <script>
-    const canvas = document.getElementById('confettiCanvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    // Preload icon images
-    const iconSources = [
-  'img/bgicons/balloons (1).png',        // 🎉
-  'img/bgicons/balloons.png',       // 🎂
-  'img/bgicons/confetti (1).png',        // 🎁
-  'img/bgicons/confetti (2).png',       // 🎈 (corrected)
-  'img/bgicons/confetti.png',          // 🔔 (corrected)
-  'img/bgicons/fireworks (1).png',    // 💟
-  'img/bgicons/fireworks.png',        // 🎊
-  'img/bgicons/gift-box.png',          // 🔔 (corrected)
-  'img/bgicons/party-hat.png',    // 💟
-  'img/bgicons/surprise.png' 
-];
+    const canvas = document.getElementById("confettiCanvas");
+    const container = document.getElementById("celebrationSection");
+    const ctx = canvas.getContext("2d");
 
+    // Resize canvas to fit container
+    function resizeCanvas() {
+        canvas.width = container.clientWidth;
+        canvas.height = container.clientHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Icon image sources
+    const iconSources = [
+        'img/bgicons/balloons (1).png',
+        'img/bgicons/balloons.png',
+        'img/bgicons/confetti (1).png',
+        'img/bgicons/confetti (2).png',
+        'img/bgicons/confetti.png',
+        'img/bgicons/fireworks (1).png',
+        'img/bgicons/fireworks.png',
+        'img/bgicons/gift-box.png',
+        'img/bgicons/party-hat.png',
+        'img/bgicons/surprise.png'
+    ];
 
     const iconImages = [];
     let loadedIcons = 0;
 
+    // Preload icons
     iconSources.forEach(src => {
         const img = new Image();
         img.src = src;
         img.onload = () => {
             loadedIcons++;
             if (loadedIcons === iconSources.length) {
-                init(); // Start animation after all images are loaded
+                init(); // Start animation when all icons are loaded
             }
         };
         iconImages.push(img);
@@ -1015,9 +1014,9 @@
         constructor(x, y) {
             this.x = x;
             this.y = y;
-            this.size = 24;
-            this.speedY = Math.random() * 0.7 + 0.3;
-            this.opacity = Math.random() * 0.7 + 0.3;
+            this.size = 20 + Math.random() * 10; // smaller icon size
+            this.speedY = 0.5 + Math.random();   // downward speed
+            this.opacity = 0.5 + Math.random() * 0.5;
             this.icon = iconImages[Math.floor(Math.random() * iconImages.length)];
         }
 
@@ -1040,7 +1039,7 @@
     let icons = [];
 
     function init() {
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 60; i++) {
             icons.push(new ConfettiIcon(Math.random() * canvas.width, Math.random() * canvas.height));
         }
         animate();
@@ -1054,11 +1053,6 @@
         });
         requestAnimationFrame(animate);
     }
-
-    window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    });
 </script>
 
     <!-- JavaScript Libraries -->
