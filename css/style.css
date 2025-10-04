@@ -729,5 +729,146 @@ h6,
       opacity: 0.65;
     }
   }
+.wave-card {
+  position: relative;
+}
 
+.waves {
+  position: absolute;  /* move out of normal flow */
+  bottom: 0;           /* stick to bottom */
+  left: 0;
+  width: 100%;
+  height: 160px;       /* control wave height */
+  display: block;
+  z-index: 0;          /* behind content */
+}
+/* Parallax animation */
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 7s; }
+.parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 10s; }
+.parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 13s; }
+.parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 20s; }
+
+@keyframes move-forever {
+  0% { transform: translate3d(-90px,0,0); }
+  100% { transform: translate3d(85px,0,0); }
+}
+
+/* Content floats above waves */
+.wave-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .waves {
+    height: 100px; /* was 40px — increase so wave still visible */
+    min-height: 100px;
+  }
+}
+
+
+
+
+/* Your card styling */
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background-color: white; /* Keep inside clean */
+  z-index: 1; /* keep above waves */
+}
+
+.card h4 {
+  z-index: 1;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 160%;
+  background-image: linear-gradient(180deg, #348E38, #348E38);
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 0;
+}
+
+.card .btn-square {
+  z-index: 1;
+}
+
+    .card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.card h4 {
+  z-index: 1;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 160%;
+  background-image: linear-gradient(180deg, #348E38, #348E38);
+  animation: rotBGimg 4s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 0;
+}
+
+.card .btn-square {
+  z-index: 1;
+}
+.h1color{
+    color: #ea484e;
+}
+.h1textcolor{
+    color: #0f4229;
+}
 
