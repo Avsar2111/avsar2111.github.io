@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #348E38;
+    --primary: #4DA652;
     --secondary: #525368;
     --light: #E8F5E9;
-    --dark: #0F4229;
+    --dark: #143C3C;
 }
 
 .back-to-top {
@@ -570,7 +570,7 @@ h6,
 }
  .containerloader {
     --uib-size: 60px;
-    --uib-color: #348E38;
+    --uib-color: #4DA652;
     --uib-speed: 2.5s;
     display: flex;
     flex-direction: column;
@@ -866,9 +866,9 @@ h6,
   z-index: 1;
 }
 .h1color{
-    color: #ea484e;
+    color: #194143;
 }
 .h1textcolor{
-    color: #0f4229;
+    color: #143C3C;
 }
 
