@@ -869,6 +869,30 @@
 
 
     
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+    emailjs.init("UqZq8ElS3TlQVTwTW"); // From EmailJS dashboard
+</script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const form = this;
+
+    // Send email to you
+    emailjs.sendForm('service_uhwi00s', 'template_7m7g7wd', form)
+        .then(() => {
+            // Auto-reply to user
+            return emailjs.sendForm('service_uhwi00s', 'emplate_xyrg27c', form);
+        })
+        .then(() => {
+            alert("Message sent successfully and auto-reply sent.");
+            form.reset();
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            alert("Failed to send message.");
+        });
+});
 
 <script>
     const canvas = document.getElementById("confettiCanvas");
