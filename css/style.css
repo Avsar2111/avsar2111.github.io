@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #4DA652;
-    --secondary: #525368;
+    --primary: #D4AF37;
+    --secondary: #800020;
     --light: #E8F5E9;
-    --dark: #143C3C;
+    --dark: #800020;
 }
 
 .back-to-top {
@@ -62,7 +62,7 @@ h6,
 
 .btn-primary,
 .btn-outline-primary:hover {
-    color: var(--light);
+    color: var(--dark);
 }
 
 .btn-square {
@@ -166,7 +166,7 @@ h6,
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(15, 66, 41, .6);
+    background: rgba(0, 128, 128, 0.15);
     z-index: 1;
 }
 
@@ -866,9 +866,9 @@ h6,
   z-index: 1;
 }
 .h1color{
-    color: #194143;
+    color: #800020;
 }
 .h1textcolor{
-    color: #143C3C;
+    color: #001B2E;
 }
 

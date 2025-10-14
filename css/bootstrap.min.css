@@ -25,7 +25,7 @@
     --bs-warning: #ffc107;
     --bs-danger: #dc3545;
     --bs-light: #e8f5e9;
-    --bs-dark: #143C3C;
+    --bs-dark: #800020;
     --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -78,7 +78,7 @@ h6,
     font-family: "Jost", sans-serif;
     font-weight: 700;
     line-height: 1.2;
-    color: #143C3C;
+    color: #800020;
 }
 h1,
 .h1 {
@@ -1734,7 +1734,7 @@ progress {
     border-color: #d1ddd2;
 }
 .table-dark {
-    --bs-table-bg: #143C3C;
+    --bs-table-bg: #800020;
     --bs-table-striped-bg: #1b4b34;
     --bs-table-striped-color: #fff;
     --bs-table-active-bg: #27553e;
@@ -2529,14 +2529,14 @@ fieldset:disabled .btn {
     opacity: 0.65;
 }
 .btn-primary {
-    color: #000;
-    background-color: #E66D6D;
-    border-color: #E66D6D;
+    color: #800020;
+    background-color: #D4AF37 ;
+    border-color: #D4AF37;
 }
 .btn-primary:hover {
-    color: #000;
-    background-color: #E36567;
-    border-color: #E36567;
+    color: #D4AF37;
+    background-color: #800020;
+    border-color: #800020;
 }
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
@@ -2806,8 +2806,8 @@ fieldset:disabled .btn {
 }
 .btn-dark {
     color: #fff;
-    background-color: #143C3C;
-    border-color: #143C3C;
+    background-color: #800020;
+    border-color: #800020;
 }
 .btn-dark:hover {
     color: #fff;
@@ -2840,8 +2840,8 @@ fieldset:disabled .btn {
 .btn-dark:disabled,
 .btn-dark.disabled {
     color: #fff;
-    background-color: #143C3C;
-    border-color: #143C3C;
+    background-color: #800020;
+    border-color: #800020;
 }
 .btn-outline-primary {
     color: #348e38;
@@ -3082,13 +3082,13 @@ fieldset:disabled .btn {
     background-color: transparent;
 }
 .btn-outline-dark {
-    color: #143C3C;
-    border-color: #143C3C;
+    color: #800020;
+    border-color: #800020;
 }
 .btn-outline-dark:hover {
     color: #fff;
-    background-color: #143C3C;
-    border-color: #143C3C;
+    background-color: #800020;
+    border-color: #800020;
 }
 .btn-check:focus + .btn-outline-dark,
 .btn-outline-dark:focus {
@@ -3100,8 +3100,8 @@ fieldset:disabled .btn {
 .btn-outline-dark.active,
 .btn-outline-dark.dropdown-toggle.show {
     color: #fff;
-    background-color: #143C3C;
-    border-color: #143C3C;
+    background-color: #800020;
+    border-color: #800020;
 }
 .btn-check:checked + .btn-outline-dark:focus,
 .btn-check:active + .btn-outline-dark:focus,
@@ -3112,7 +3112,7 @@ fieldset:disabled .btn {
 }
 .btn-outline-dark:disabled,
 .btn-outline-dark.disabled {
-    color: #143C3C;
+    color: #800020;
     background-color: transparent;
 }
 .btn-link {
@@ -5355,7 +5355,7 @@ fieldset:disabled .btn {
     padding: 0.5rem 1rem;
     margin-bottom: 0;
     font-size: 1rem;
-    color: #143C3C;
+    color: #800020;
     background-color: #f0f0f0;
     border-bottom: 1px solid #d8d8d8;
     border-top-left-radius: 3px;
@@ -5723,7 +5723,7 @@ fieldset:disabled .btn {
     color: #edf7ed;
 }
 .link-dark {
-    color: #143C3C;
+    color: #800020;
 }
 .link-dark:hover,
 .link-dark:focus {
@@ -6030,7 +6030,7 @@ fieldset:disabled .btn {
     border-color: #e8f5e9 !important;
 }
 .border-dark {
-    border-color: #143C3C !important;
+    border-color: #800020 !important;
 }
 .border-white {
     border-color: #fff !important;
@@ -6751,7 +6751,7 @@ fieldset:disabled .btn {
     word-break: break-word !important;
 }
 .text-primary {
-    color: #348e38 !important;
+    color: #D4AF37 !important;
 }
 .text-secondary {
     color: #525368 !important;
@@ -6772,7 +6772,7 @@ fieldset:disabled .btn {
     color: #e8f5e9 !important;
 }
 .text-dark {
-    color: #143C3C !important;
+    color: #800020 !important;
 }
 .text-white {
     color: #fff !important;
@@ -6811,10 +6811,10 @@ fieldset:disabled .btn {
     background-color: #dc3545 !important;
 }
 .bg-light {
-    background-color: #e8f5e9 !important;
+    background-color: #d4af3721 !important;
 }
 .bg-dark {
-    background-color: #143C3C !important;
+    background-color: #800020 !important;
 }
 .bg-body {
     background-color: #fff !important;
@@ -6859,7 +6859,7 @@ fieldset:disabled .btn {
     border-radius: 4px !important;
 }
 .rounded-circle {
-    border-radius: 50% !important;
+    border-radius: 10% !important;
 }
 .rounded-pill {
     border-radius: 50rem !important;
