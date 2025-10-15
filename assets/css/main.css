@@ -14,14 +14,14 @@
     /**
   @color declaration
   */
-    --clr-common-white: #ffffff;
+    --clr-common-white: #caa52b;
     --clr-common-black: #000;
     --clr-common-placeholder: #c9c9c9;
     --clr-common-placeholder-2: #c4c4c4;
     --clr-common-placeholder-3: #999999;
     --clr-common-heading: #1C1D1B;
     --clr-common-body-text: #404a3d;
-    --clr-theme-1: #5b8c51;
+    --clr-theme-1: #800020;
     --clr-theme-2: #eddd5e;
     --clr-theme-3: #EEAA36;
     --clr-theme-4: #E66D6D;
@@ -52,7 +52,7 @@
     --clr-border-4: #515c4e;
     --clr-border-5: #ececec;
     --clr-border-6: #e9e9e9;
-    --clr-border-7: #d9dbd8;
+    --clr-border-7: #800020;
     --clr-border-8: #f1f1f1;
     --clr-border-9: #efefef;
     --clr-border-10: #cecdbf;
@@ -224,6 +224,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     --border-weight: 2px;
     --dash-size: 15px;
     --gap-size: 10px;
+    color: #caa52b;
     position: relative;
    
     background: transparent;

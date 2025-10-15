@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #D4AF37;
-    --secondary: #800020;
-    --light: #E8F5E9;
-    --dark: #800020;
+    --primary: #800020;
+    --secondary: #caa52b;
+    --light: #EFF1ED;
+    --dark: #00272B;
 }
 
 .back-to-top {
@@ -62,7 +62,7 @@ h6,
 
 .btn-primary,
 .btn-outline-primary:hover {
-    color: var(--dark);
+    color: var(--primary);
 }
 
 .btn-square {
@@ -105,7 +105,7 @@ h6,
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
     padding: 25px 0;
-    color: var(--dark);
+    color: var(--primary);
     font-size: 18px;
     font-weight: 500;
     outline: none;
@@ -113,7 +113,7 @@ h6,
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .navbar .dropdown-toggle::after {
@@ -132,7 +132,7 @@ h6,
     }
 
     .navbar .navbar-nav {
-        border-top: 1px solid #EEEEEE;
+        border-top: 1px solid #EFF1ED;
     }
 }
 
@@ -227,7 +227,7 @@ h6,
 /*** Facts & Quote ***/
 .facts,
 .quote {
-    background: rgba(15, 66, 41, .6);
+    background: rgba(128, 0, 32, 0.81);
 }
 
 
@@ -798,7 +798,7 @@ h6,
   position: absolute;
   width: 120px;
   height: 160%;
-  background-image: linear-gradient(180deg, #348E38, #348E38);
+  background-image: linear-gradient(180deg, #caa52b, #caa52b);
   animation: rotBGimg 3s linear infinite;
   transition: all 0.2s linear;
 }
@@ -843,7 +843,7 @@ h6,
   position: absolute;
   width: 120px;
   height: 160%;
-  background-image: linear-gradient(180deg, #348E38, #348E38);
+  background-image: linear-gradient(180deg, #caa52b, #caa52b);
   animation: rotBGimg 4s linear infinite;
   transition: all 0.2s linear;
 }
@@ -866,9 +866,9 @@ h6,
   z-index: 1;
 }
 .h1color{
-    color: #800020;
+    color: #001B2E;
 }
 .h1textcolor{
-    color: #001B2E;
+    color: #3b200d;
 }
 
