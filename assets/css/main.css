@@ -222,7 +222,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 .bd-gallery__button button {
     --border-color: var(--clr-border-7);
     --border-weight: 2px;
-    --dash-size: 15px;
+    --dash-size: 0px;
     --gap-size: 10px;
     color: #caa52b;
     position: relative;
