@@ -333,7 +333,7 @@
 
 
     <!-- Service Start -->
-    <div class="container-fluid my-5 py-5">
+    <div class="container-fluid py-5" style="background-color: #fffff0;">
         <div class="container px-5">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="fs-5 fw-bold text-primary">Our Expertise</p>
@@ -437,7 +437,7 @@
 
 
             <!-- Quote Start -->
-    <div class="container-fluid quote my-5 py-5 position-relative overflow-hidden">
+    <div class="container-fluid quote py-5 position-relative overflow-hidden">
   <!-- overlay for tint/opactiy -->
   <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 74, 119, 0.13);; z-index:1;"></div>
   
@@ -894,93 +894,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         });
 });
 </script>
-<script>
-    const canvas = document.getElementById("confettiCanvas");
-    const container = document.getElementById("celebrationSection");
-    const ctx = canvas.getContext("2d");
 
-    // Resize canvas to fit container
-    function resizeCanvas() {
-        canvas.width = container.clientWidth;
-        canvas.height = container.clientHeight;
-    }
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Icon image sources
-    const iconSources = [
-        'img/bgicons/balloons (1).png',
-        'img/bgicons/balloons.png',
-        'img/bgicons/confetti (1).png',
-        'img/bgicons/confetti (2).png',
-        'img/bgicons/confetti.png',
-        'img/bgicons/fireworks (1).png',
-        'img/bgicons/fireworks.png',
-        'img/bgicons/gift-box.png',
-        'img/bgicons/party-hat.png',
-        'img/bgicons/surprise.png'
-    ];
-
-    const iconImages = [];
-    let loadedIcons = 0;
-
-    // Preload icons
-    iconSources.forEach(src => {
-        const img = new Image();
-        img.src = src;
-        img.onload = () => {
-            loadedIcons++;
-            if (loadedIcons === iconSources.length) {
-                init(); // Start animation when all icons are loaded
-            }
-        };
-        iconImages.push(img);
-    });
-
-    class ConfettiIcon {
-        constructor(x, y) {
-            this.x = x;
-            this.y = y;
-            this.size = 20 + Math.random() * 10; // smaller icon size
-            this.speedY = 0.5 + Math.random();   // downward speed
-            this.opacity = 0.5 + Math.random() * 0.5;
-            this.icon = iconImages[Math.floor(Math.random() * iconImages.length)];
-        }
-
-        update() {
-            this.y += this.speedY;
-            if (this.y > canvas.height) {
-                this.y = -this.size;
-                this.x = Math.random() * canvas.width;
-                this.icon = iconImages[Math.floor(Math.random() * iconImages.length)];
-            }
-        }
-
-        draw() {
-            ctx.globalAlpha = this.opacity;
-            ctx.drawImage(this.icon, this.x, this.y, this.size, this.size);
-            ctx.globalAlpha = 1;
-        }
-    }
-
-    let icons = [];
-
-    function init() {
-        for (let i = 0; i < 60; i++) {
-            icons.push(new ConfettiIcon(Math.random() * canvas.width, Math.random() * canvas.height));
-        }
-        animate();
-    }
-
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        icons.forEach(icon => {
-            icon.update();
-            icon.draw();
-        });
-        requestAnimationFrame(animate);
-    }
-</script>
 
     <!-- JavaScript Libraries -->
 <script src="js/jquery-3.4.1.min.js"></script>
