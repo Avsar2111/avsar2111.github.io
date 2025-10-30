@@ -501,7 +501,7 @@ h6,
 }
 
 .footer .btn.btn-link:hover {
-    color: var(--primary);
+    color: var(--secondary);
     letter-spacing: 1px;
     box-shadow: none;
 }
@@ -516,7 +516,7 @@ h6,
 }
 
 .copyright a:hover {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 
