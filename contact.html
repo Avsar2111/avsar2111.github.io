@@ -58,7 +58,7 @@
 </script>
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <!-- <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
             <h1 class="display-3 text-white mb-4 animated slideInDown">Contact Us</h1>
             <nav aria-label="breadcrumb animated slideInDown">
@@ -69,14 +69,14 @@
                 </ol>
             </nav>
         </div>
-    </div>
+    </div> -->
     <!-- Page Header End -->
 
 
     <!-- Contact Start -->
-       <div class="container-fluid quote my-5 py-5 position-relative overflow-hidden">
+      <div class="container-fluid quote mb-5 py-5 position-relative overflow-hidden">
   <!-- overlay for tint/opactiy -->
-  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(54, 142, 56, 0.5); z-index:1;"></div>
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 74, 119, 0.13);; z-index:1;"></div>
   
               <video class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover" autoplay muted loop playsinline style="object-fit: cover; z-index:0;">
                 <source src="img/Contactusbanner.mp4" type="video/mp4">
@@ -87,8 +87,9 @@
     <div class="row justify-content-center">
       <div class="col-lg-7">
                     <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
-                        <h1 class="display-5 text-center mb-1">Contact Us</h1>
+                        <h1 class="display-5 text-primary text-center mb-1">Contact Us</h1>
                         <h6 class="display-6 text-center mb-5">We’re just a message away</h6>
+                         <form id="contactForm">
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <div class="form-floating">
@@ -124,6 +125,7 @@
                                 <button class="btn btn-primary py-3 px-4" type="submit">Submit Now</button>
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -143,7 +145,32 @@
   </script>
     <!-- Footer End -->
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+    emailjs.init("UqZq8ElS3TlQVTwTW"); // From EmailJS dashboard
+</script>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
+    const form = this;
+
+    // Send email to you
+    emailjs.sendForm('service_uhwi00s', 'template_7m7g7wd', form)
+        .then(() => {
+            // Auto-reply to user
+            return emailjs.sendForm('service_uhwi00s', 'template_xyrg27c', form);
+        })
+        .then(() => {
+            alert("Message sent successfully and auto-reply sent.");
+            form.reset();
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            alert("Failed to send message.");
+        });
+});
+</script>
     <!-- JavaScript Libraries -->
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
