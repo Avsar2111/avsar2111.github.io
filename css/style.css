@@ -570,7 +570,7 @@ h6,
 }
  .containerloader {
     --uib-size: 60px;
-    --uib-color: #4DA652;
+    --uib-color: #800020;
     --uib-speed: 2.5s;
     display: flex;
     flex-direction: column;
