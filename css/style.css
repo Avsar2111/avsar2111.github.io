@@ -125,35 +125,7 @@ h6,
     margin-left: 8px;
 }
 
-@media (max-width: 991.98px) {
-    .navbar .navbar-nav .nav-link  {
-        margin-right: 0;
-        padding: 10px 0;
-    }
 
-    .navbar .navbar-nav {
-        border-top: 1px solid #EFF1ED;
-    }
-}
-
-@media (min-width: 992px) {
-    .navbar .nav-item .dropdown-menu {
-        display: block;
-        border: none;
-        margin-top: 0;
-        top: 150%;
-        opacity: 0;
-        visibility: hidden;
-        transition: .5s;
-    }
-
-    .navbar .nav-item:hover .dropdown-menu {
-        top: 100%;
-        visibility: visible;
-        transition: .5s;
-        opacity: 1;
-    }
-}
 
 
 /*** Header ***/
@@ -184,19 +156,7 @@ h6,
     border: 10px solid var(--primary); */
 }
 
-@media (max-width: 768px) {
-    #header-carousel .carousel-item {
-        position: relative;
-        min-height: 450px;
-    }
-    
-    #header-carousel .carousel-item img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
+
 
 .page-header {
     background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)), url(../img/carousel-1.jpg) center center no-repeat;
@@ -756,19 +716,6 @@ h6,
   100% { transform: translate3d(85px,0,0); }
 }
 
-/* Content floats above waves */
-.wave-content {
-  position: relative;
-  z-index: 10;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .waves {
-    height: 100px; /* was 40px — increase so wave still visible */
-    min-height: 100px;
-  }
-}
 
 
 
@@ -806,6 +753,11 @@ h6,
 @keyframes rotBGimg {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
+}
+
+.wave-content{
+  position:relative; 
+  z-index:10;
 }
 
 .card::after {
@@ -948,15 +900,30 @@ h6,
   .spot4 { transform: translate(420px, 0) scale(0.8); }
 }
 
-/* Hide spotlight on mobile */
-@media (max-width: 768px) {
-  .spotlight-bg {
-    display: none !important;
-  }
-}
 
 .sfont{
   font-family: 'Italianno' !important;
   font-weight: 800;
   font-size: 7rem;
+}
+.afont{
+  font-family: 'Arima',system-ui !important;
+}
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
 }
