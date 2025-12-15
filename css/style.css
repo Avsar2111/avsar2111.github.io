@@ -247,7 +247,7 @@ h6,
 .service-item:hover .service-text {
     background: rgba(0, 0, 0, 0.50);;
 }
-
+  
 .service-item .service-text h4,
 .service-item .service-text p {
     transition: .3;
