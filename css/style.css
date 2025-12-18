@@ -199,10 +199,35 @@ h6,
     }
 }
 
-
-/*** Facts & Quote ***/
-.facts1,
 .quote {
+    position: relative;
+    background-image: url("img/contact_banner_desktop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    padding: 80px 0;
+}
+
+/* MOBILE – FORCE PORTRAIT IMAGE */
+@media only screen and (max-width: 767px) {
+    .quote {
+        background-image: url("img/contact_banner_tab.png") !important;
+        background-position: center top;
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .quote {
+        background-image: url('img/contact_banner_mobile.png');
+        background-position: center top;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+/*** Facts & Quote ***/
+.facts1 {
     background: rgba(128, 0, 32, 0.81);
 } 
 
