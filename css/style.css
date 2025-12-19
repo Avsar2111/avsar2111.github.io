@@ -201,7 +201,7 @@ h6,
 
 .quote {
     position: relative;
-    background-image: url("img/contact_banner_desktop.png");
+    background-image: url("../img/contact_banner_desktop.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -212,7 +212,7 @@ h6,
 /* MOBILE – FORCE PORTRAIT IMAGE */
 @media only screen and (max-width: 767px) {
     .quote {
-        background-image: url("img/contact_banner_tab.png") !important;
+        background-image: url("../img/contact_banner_tab.png") !important;
         background-position: center top;
         padding: 60px 0;
     }
@@ -220,7 +220,7 @@ h6,
 
 @media (max-width: 576px) {
     .quote {
-        background-image: url('img/contact_banner_mobile.png');
+        background-image: url('../img/contact_banner_mobile.png');
         background-position: center top;
         padding-top: 60px;
         padding-bottom: 60px;
@@ -246,7 +246,11 @@ h6,
 
     animation: lightsMove 12s linear infinite;
 }
-
+@media (prefers-reduced-motion: reduce) {
+    .footer {
+        animation: none;
+    }
+}
 @keyframes lightsMove {
     from {
         background-position: 0 top;
