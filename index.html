@@ -38,6 +38,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Arima&display=swap" rel="stylesheet"> 
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
 </head>
 
 <body>
@@ -206,7 +210,7 @@
                             </div>
                             <div class="ps-3">
                                 <h4 class="h1color">Parking</h4>
-                                <span class="h1textcolor">Capacity for 250+ cars and two-wheelers.</span>
+                                <span class="h1textcolor">Spacious parking for all guests</span>
                             </div>
                         </div>
                     </div>
@@ -384,110 +388,318 @@
     </div>
   </div>
 </div>
+<!-- Facilities Slider -->
+<!-- Facilities Slider -->
+  <div class="container-fluid px-5">
+    <div class="text-center mx-auto">
+      <p class="fs-5 fw-bold text-primary">Our Facilities</p>
+      <h1 class="display-5 mb-5">Everything You Need In One Place</h1>
+    </div>
 
+    <!-- Swiper Slider -->
+    <div class="swiper facility-slider">
+      <div class="swiper-wrapper">
 
+        <div class="swiper-slide facility-card">
+          <div class="icon-wrapper">
+            <img src="img/icon/hall.png" alt="">
+          </div>
+          <h5>Grand Banquet Hall</h5>
+          <p>Spacious, air-conditioned luxury for 500+ guests.</p>
+        </div>
+
+        <div class="swiper-slide facility-card">
+          <div class="icon-wrapper">
+            <img src="img/icon/garden.png" alt="">
+          </div>
+          <h5>Lush Green Lawn</h5>
+          <p>Beautiful open lawn ideal for weddings, receptions, and outdoor ceremonies.</p>
+        </div>
+          <div class="swiper-slide facility-card">
+          <div class="icon-wrapper">
+            <img src="img/icon/bride.png" alt="">
+          </div>
+          <h5>Bride Suites</h5>
+          <p>Exclusive luxury air-conditioned suite designed for bride comfort and privacy.</p>
+        </div>
+       <div class="swiper-slide facility-card">
+          <div class="icon-wrapper">
+            <img src="img/icon/groom.png" alt="">
+          </div>
+          <h5>Groom Suites</h5>
+          <p>Well-furnished private suite for groom and family preparation.</p>
+        </div>
+   <div class="swiper-slide facility-card">
+          <div class="icon-wrapper">
+            <img src="img/icon/backup.png" alt="">
+          </div>
+          <h5>24/7 Power Backup</h5>
+          <p>High-capacity generators ensuring uninterrupted power throughout the event.</p>
+        </div>
+
+        <div class="swiper-slide facility-card">
+          <div class="icon-wrapper">
+            <img src="img/icon/washroom.png" alt="">
+          </div>
+          <h5>Washrooms</h5>
+          <p>Clean, hygienic, and well-maintained washrooms for guests’ convenience.</p>
+        </div>
+
+        <div class="swiper-slide facility-card">
+          <div class="icon-wrapper">
+            <img src="img/icon/parking.png" alt="">
+          </div>
+          <h5>Ample Parking</h5>
+          <p>Safe and spacious parking for all guests.</p>
+        </div>
+
+<div class="swiper-slide facility-card">
+  <div class="icon-wrapper">
+    <img src="img/icon/handwash.png" alt="">
+  </div>
+  <h5>Hand Cleaning Area</h5>
+  <p>Dedicated hand wash and sanitizing stations conveniently placed for guest hygiene.</p>
+</div>
+         <div class="swiper-slide facility-card">
+      <div class="icon-wrapper">
+        <img src="img/icon/kitchen.png" alt="">
+      </div>
+      <h5>Dedicated Catering Kitchen</h5>
+      <p>Separate, hygienic kitchen area designed for large-scale food preparation.</p>
+    </div>
+        <div class="swiper-slide facility-card">
+      <div class="icon-wrapper">
+        <img src="img/icon/kitchene.png" alt="">
+      </div>
+      <h5>Professional Kitchen Equipment</h5>
+      <p>Fully equipped kitchen with modern tools to support professional catering teams.</p>
+    </div>
+        <div class="swiper-slide facility-card">
+      <div class="icon-wrapper">
+        <img src="img/icon/fire.png" alt="">
+      </div>
+      <h5>Fire Safety System</h5>
+      <p>Advanced fire safety measures and equipment ensuring complete guest safety.</p>
+    </div>
+        
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+// const facilitySwiper = new Swiper(".facility-slider", {
+//   slidesPerView: 'auto',
+//   spaceBetween: 20,
+//   freeMode: true, // smooth continuous scroll
+//   freeModeMomentum: false,
+//   speed: 5000,
+//   autoplay: {
+//     delay: 0,
+//     disableOnInteraction: false,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   breakpoints: {
+//     0: { slidesPerView: 1 },
+//     576: { slidesPerView: 2 },
+//     768: { slidesPerView: 3 },
+//     992: { slidesPerView: 4 },
+//   },
+// });
+const facilitySwiper = new Swiper(".facility-slider", {
+  slidesPerView: 5, // fixed number
+  spaceBetween: 20,
+  loop: true,
+  speed: 4000,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  freeMode: true,
+  freeModeMomentum: false,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: { slidesPerView: 1 },
+    576: { slidesPerView: 2 },
+    768: { slidesPerView: 3 },
+    992: { slidesPerView: 4 },
+    1200 : {slidesPerView : 5},
+  },
+});
+
+</script>
 
     <!-- Service Start -->
-    <div class="container-fluid py-5" >
-        <div class="container px-5">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-bold text-primary">Our Expertise</p>
-                <h1 class="display-5 mb-5">We Do Event For You</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded d-flex h-100">
-                        <div class="service-img rounded">
-                            <img class="img-fluid" src="img/event1.JPG" alt="">
-                        </div>
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/Wedding.png" alt="Icon">
-                            </div>
-                            <h4 class="mb-3">Wedding</h4>
-                           <p class="mb-4">Create timeless memories with a beautiful wedding planned to perfection.</p>
-                            <!-- <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded d-flex h-100">
-                        <div class="service-img rounded">
-                            <img class="img-fluid" src="img/event2.jpg" alt="">
-                        </div>
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/Reception.png" alt="Icon">
-                            </div>
-                            <h4 class="mb-3">Reception</h4>
-                           <p class="mb-4">Celebrate your union in style with a grand reception party.</p>
-                           <!-- <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded d-flex h-100">
-                        <div class="service-img rounded">
-                            <img class="img-fluid" src="img/event3.JPG" alt="">
-                        </div>
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/Sangeet.png" alt="Icon">
-                            </div>
-                            <h4 class="mb-3">Sangeet</h4>
-                           <p class="mb-4">Dance, music, and joy come alive at your vibrant Sangeet night.</p>
-                           <!-- <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded d-flex h-100">
-                        <div class="service-img rounded">
-                            <img class="img-fluid" src="img/event2.jpg" alt="">
-                        </div>
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/Engagement.png" alt="Icon">
-                            </div>
-                            <h4 class="mb-3">Engagement</h4>
-                           <p class="mb-4">Start your love story with a stylish and intimate engagement event.</p>
-                           <!-- <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded d-flex h-100">
-                        <div class="service-img rounded">
-                            <img class="img-fluid" src="img/event3.JPG" alt="">
-                        </div>
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/Presentation.png" alt="Icon">
-                            </div>
-                            <h4 class="mb-3">Corporate Meeting</h4>
-                           <p class="mb-4">Host focused and seamless meetings in a professional setup.</p>
-                           <!-- <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded d-flex h-100">
-                        <div class="service-img rounded">
-                            <img class="img-fluid" src="img/event4.jpg" alt="">
-                        </div>
-                        <div class="service-text rounded p-5">
-                            <div class="btn-square rounded-circle mx-auto mb-3">
-                                <img class="img-fluid" src="img/icon/Celebration.png" alt="Icon">
-                            </div>
-                            <h4 class="mb-3">Special Celebration</h4>
-                         <p class="mb-4">Joyful events like birthdays, baby showers, and more — perfect for making memories.</p>
-                           <!-- <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container-fluid py-5">
+  <div class="container px-3">
+    <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s">
+      <p class="fs-5 fw-bold text-primary">Our Expertise</p>
+      <h1 class="display-5 mb-5">We Do Event For You</h1>
     </div>
+
+    <div class="row g-4 align-items-start">
+      <!-- Left side: Service Text -->
+      <div class="col-lg-6 order-lg-1 order-2">
+        <div class="list-group">
+          <div class="service-hover list-group-item p-4 mb-3 active" data-main="./assets/img/chori6.jpg" 
+     data-overlay="./assets/img/chori7.jpeg">
+            <div class="d-flex align-items-start">
+              <div class="me-3">
+                <img src="img/icon/Wedding.png" alt="Icon" style="width:40px;height:40px;">
+              </div>
+              <div>
+                <h5 class="mb-1">Wedding</h5>
+                <p class="mb-0 mt-1">Create timeless memories with a beautiful wedding planned to perfection.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-hover list-group-item p-4 mb-3" data-main="./assets/img/reception1.jpg" 
+     data-overlay="./assets/img/vidhi1.jpg">
+            <div class="d-flex align-items-start">
+              <div class="me-3">
+                <img src="img/icon/Reception.png" alt="Icon" style="width:40px;height:40px;">
+              </div>
+              <div>
+                <h5 class="mb-1">Reception</h5>
+                <p class="mb-0 mt-1">Celebrate your union in style with a grand reception party.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-hover list-group-item p-4 mb-3" data-main="./assets/img/garba1.jpg" 
+     data-overlay="./assets/img/haldi1.jpg">
+            <div class="d-flex align-items-start">
+              <div class="me-3">
+                <img src="img/icon/Sangeet.png" alt="Icon" style="width:40px;height:40px;">
+              </div>
+              <div>
+                <h5 class="mb-1">Sangeet</h5>
+                <p class="mb-0 mt-1">Dance, music, and joy come alive at your vibrant Sangeet night.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-hover list-group-item p-4 mb-3" data-main="./assets/img/vidhi1.jpg" 
+     data-overlay="./assets/img/vidhi1.jpg">
+            <div class="d-flex align-items-start">
+              <div class="me-3">
+                <img src="img/icon/Engagement.png" alt="Icon" style="width:40px;height:40px;">
+              </div>
+              <div>
+                <h5 class="mb-1">Engagement</h5>
+                <p class="mb-0 mt-1">Start your love story with a stylish and intimate engagement event.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-hover list-group-item p-4 mb-3" data-main="./assets/img/chori8.png" 
+     data-overlay="./assets/img/chori5.jpg">
+            <div class="d-flex align-items-start">
+              <div class="me-3">
+                <img src="img/icon/Presentation.png" alt="Icon" style="width:40px;height:40px;">
+              </div>
+              <div>
+                <h5 class="mb-1">Corporate Meeting</h5>
+                <p class="mb-0 mt-1">Host focused and seamless meetings in a professional setup.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-hover list-group-item p-4 mb-3" data-main="./assets/img/gate2.jpg" 
+     data-overlay="./assets/img/gate6.jpg">
+            <div class="d-flex align-items-start">
+              <div class="me-3">
+                <img src="img/icon/Celebration.png" alt="Icon" style="width:40px;height:40px;">
+              </div>
+              <div>
+                <h5 class="mb-1">Special Celebration</h5>
+                <p class="mb-0 mt-1">Birthdays, baby showers, and more — perfect for making memories.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side: Big Image -->
+ <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0 big-service-wrapper">
+  <div class="big-service-img" style="height: 550px; position:relative; border-radius:4px; overflow:visible;">
+    <div class="main-image" style="width:80%; height:80%; border-radius:4px; overflow:hidden;">
+      <img src="./assets//img/chori6.jpg" style="width:100%; height:100%; object-fit:cover; transition: all 0.4s ease;">
+    </div>
+    <div class="overlay-image">
+      <img src="./assets/img/chori7.jpeg" >
+    </div>
+  </div>
+</div>
+
+
+
+
+    </div>
+  </div>
+</div>
+
+<script>
+const serviceItems = document.querySelectorAll(".service-hover");
+const mainImage = document.querySelector(".main-image img");
+const overlayImage = document.querySelector(".overlay-image img");
+const overlayWrapper = document.querySelector(".overlay-image");
+
+// Random angle generator
+function getRandomAngle() {
+  const angles = [-18, -12, -8, 8, 12, 18, 22];
+  return angles[Math.floor(Math.random() * angles.length)];
+}
+
+const canHover = window.matchMedia('(hover: hover)').matches;
+
+serviceItems.forEach(item => {
+  const updateImages = () => {
+    const mainSrc = item.dataset.main;
+    const overlaySrc = item.dataset.overlay;
+
+    // Fade out
+    mainImage.style.opacity = 0;
+    overlayWrapper.style.opacity = 0;
+
+    setTimeout(() => {
+      mainImage.src = mainSrc;
+      overlayImage.src = overlaySrc;
+
+      // Apply random rotation
+      const angle = getRandomAngle();
+      overlayWrapper.style.transform = `rotate(${angle}deg)`;
+
+      // Fade in
+      mainImage.style.opacity = 1;
+      overlayWrapper.style.opacity = 1;
+    }, 200);
+
+    serviceItems.forEach(i => i.classList.remove("active"));
+    item.classList.add("active");
+  };
+
+  if (canHover) {
+    item.addEventListener("mouseenter", updateImages);
+  } else {
+    item.addEventListener("click", updateImages);
+  }
+});
+
+</script>
+
     <!-- Service End -->
 
 

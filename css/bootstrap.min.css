@@ -4500,9 +4500,9 @@ fieldset:disabled .btn {
 }
 .list-group-item.active {
     z-index: 2;
-    color: #fff;
-    background-color: #348e38;
-    border-color: #348e38;
+    color: #212529;
+    background-color: #fffff0;
+    border-color: #fffff0;
 }
 .list-group-item + .list-group-item {
     border-top-width: 0;
