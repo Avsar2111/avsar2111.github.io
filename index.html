@@ -38,6 +38,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Arima&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -356,7 +358,7 @@
           <div class="row g-4 align-items-center">
             <div class="col-md-6">
               <div class="row g-4">
-                <div class="col-12">
+                <div class="col-12" >
                   <div class="card text-center py-5 px-4">
                     <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                       <i class="bi bi-patch-check fa-3x text-primary"></i>
@@ -389,7 +391,7 @@
   </div>
 </div>
 <!-- Facilities Slider -->
-  <div class="container-fluid px-5">
+  <div class="container-fluid px-5 py-5" style="background-color: white;">
     <div class="text-center mx-auto">
       <p class="fs-5 fw-bold text-primary">Our Facilities</p>
       <h1 class="display-5 mb-5">Everything You Need In One Place</h1>
@@ -514,7 +516,7 @@
 //   },
 // });
 const facilitySwiper = new Swiper(".facility-slider", {
-  slidesPerView: 5, // fixed number
+  slidesPerView: 3, // fixed number
   spaceBetween: 20,
   loop: true,
   speed: 4000,
@@ -530,10 +532,10 @@ const facilitySwiper = new Swiper(".facility-slider", {
   },
   breakpoints: {
     0: { slidesPerView: 1 },
-    576: { slidesPerView: 2 },
-    768: { slidesPerView: 3 },
-    992: { slidesPerView: 4 },
-    1200 : {slidesPerView : 5},
+    576: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    992: { slidesPerView: 3 },
+    1200 : {slidesPerView : 3},
   },
 });
 
@@ -1143,7 +1145,7 @@ serviceItems.forEach(item => {
 
 
     <!-- Team Start -->
-    <div class="container-xxl py-5">
+    <div class="container-fluid py-5" style="background-color: white;">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <p class="fs-5 fw-bold text-primary">Our Team</p>

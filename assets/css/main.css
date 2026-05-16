@@ -1,20 +1,20 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap");
 :root {
     /**
   @font family declaration
   */
     --bd-ff-body: 'Arima', sans-serif;
     ;
-    --bd-ff-heading: 'Quicksand', sans-serif;
+    --bd-ff-heading: 'Manrope', sans-serif;
     ;
-    --bd-ff-p: font-family: 'Rubik', sans-serif;
+    --bd-ff-p: font-family: 'Manrope', sans-serif;
     ;
-    --bd-ff-fontawesome: "Font Awesome 6 Pro";
     /**
   @color declaration
   */
-    --clr-common-white: #caa52b;
+    --clr-common-yellow: #caa52b;
+     --clr-common-white: #fff;
     --clr-common-black: #000;
     --clr-common-placeholder: #c9c9c9;
     --clr-common-placeholder-2: #c4c4c4;
@@ -195,7 +195,7 @@ button {
 .bd-theme__btn-7:hover {
     --border-color: var(--clr-theme-1);
     background-color: var(--clr-theme-1);
-    color: var(--clr-common-white);
+    color: var(--clr-common-yellow);
     --border-weight: 1px;
     --dash-size: 1px;
     --gap-size: 2px;
@@ -263,7 +263,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 .bd-gallery__button button.active {
     --border-color: var(--clr-theme-1);
     background-color: var(--clr-theme-1);
-    color: var(--clr-common-white);
+    color: white;
     --border-weight: 1px;
     --dash-size: 1px;
     --gap-size: 2px;
@@ -339,7 +339,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 }
 
 .bd-gallery__navigatin button:hover i {
-    color: var(--clr-common-white);
+    color: var(--clr-common-yellow);
 }
 
 .bd-testimonial__navigatin {
@@ -413,11 +413,11 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 }
 
 .bd-section__title.s-3 {
-    color: var(--clr-common-white);
+    color: var(--clr-common-yellow);
 }
 
 .bd-section__title.white {
-    color: var(--clr-common-white);
+    color: var(--clr-common-yellow);
 }
 
 .bd-section__paragraph {
@@ -587,7 +587,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 }
 
 .bd-gallery__content h3 a {
-    color: var(--clr-common-white);
+    color: var(--clr-common-yellow);
     margin-bottom: 12px;
     display: block;
 }
@@ -597,7 +597,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 }
 
 .bd-gallery__content p {
-    color: var(--clr-common-white);
+    color: var(--clr-common-yellow);
     opacity: 0.6;
     margin-bottom: 0;
 }
@@ -633,9 +633,10 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 .bd-gallery__action a {
     height: 50px;
     width: 50px;
-    background: var(--clr-common-white);
+ background-color: var(--clr-theme-1);
+    color: var(--clr-common-white);
     text-align: center;
-    line-height: 50px;
+    line-height: 53px;
     display: inline-block;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -646,8 +647,8 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 }
 
 .bd-gallery__action a:hover {
-    background-color: var(--clr-theme-1);
-    color: var(--clr-common-white);
+    background-color: var(--clr-common-yellow);
+    color: var(--clr-theme-1);
 }
 
 .bd-gallery__thumb {

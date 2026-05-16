@@ -105,7 +105,7 @@ h6,
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
     padding: 25px 0;
-    color: var(--primary);
+    color: var(--secondary);
     font-size: 18px;
     font-weight: 600;
     outline: none;
@@ -115,7 +115,7 @@ h6,
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--secondary);
+    color: var(--primary);
     
 }
 .navbar .navbar-nav .nav-link:hover::after,
@@ -129,7 +129,7 @@ h6,
     bottom: 12px;   /* adjust underline position */
     width: 0%;
     height: 2px;
-    background: #C9A24A; /* GOLD COLOR */
+    background: var(--primary); 
     transition: 0.3s ease-in-out;
 }
 .navbar .dropdown-toggle::after {
@@ -201,18 +201,19 @@ h6,
 
 .quote {
     position: relative;
-    background-image: url("../img/contact_banner_desktop.png");
-    background-size: cover;
+ background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/contact_banner_desktop.png");    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-
     padding: 80px 0;
 }
 
 /* MOBILE – FORCE PORTRAIT IMAGE */
 @media only screen and (max-width: 767px) {
     .quote {
-        background-image: url("../img/contact_banner_tab.png") !important;
+        background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../img/contact_banner_tab.png") !important;
         background-position: center top;
         padding: 60px 0;
     }
@@ -220,7 +221,8 @@ h6,
 
 @media (max-width: 576px) {
     .quote {
-        background-image: url('../img/contact_banner_mobile.png');
+        background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../img/contact_banner_mobile.png');
         background-position: center top;
         padding-top: 60px;
         padding-bottom: 60px;
@@ -245,6 +247,9 @@ h6,
     background-position: top center;
 
     animation: lightsMove 12s linear infinite;
+}
+.footer a,.fp{
+  font-family: 'Manrope',sans-serif !important;
 }
 @media (prefers-reduced-motion: reduce) {
     .footer {
@@ -803,7 +808,7 @@ h6,
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 15px;
   box-sizing: border-box;
   background-color: white; /* Keep inside clean */
   z-index: 1; /* keep above waves */
@@ -855,7 +860,7 @@ h6,
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 15px;
   box-sizing: border-box;
 }
 
@@ -894,6 +899,7 @@ h6,
     color: #001B2E;
 }
 .h1textcolor{
+    font-family: 'Manrope' !important;
     color: #3b200d;
 }
 
@@ -984,6 +990,11 @@ h6,
 .afont{
   font-family: 'Arima',system-ui !important;
 }
+.bfont{
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
 @media (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
@@ -1003,7 +1014,9 @@ h6,
     }
 }
 
-
+p{
+  font-family: bd-ff-heading !important;
+}
 
 
 
@@ -1022,7 +1035,7 @@ h6,
 }
 
 .facility-card {
-  background: #fff;
+  background: #fffff0;
   border-radius: 15px;
   padding: 25px 15px;
   text-align: center;
