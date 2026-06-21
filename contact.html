@@ -27,6 +27,7 @@
 </head>
 
 <body>
+    
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
@@ -73,14 +74,14 @@
     <!-- Page Header End -->
 
 
-    <div class="container-fluid quote mb-5 py-5 position-relative overflow-hidden">
+    <!-- <div class="container-fluid quote mb-5 py-5 position-relative overflow-hidden"> -->
   <!-- overlay for tint/opactiy -->
-  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 74, 119, 0.13);; z-index:1;"></div>
+  <!-- <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 74, 119, 0.13);; z-index:1;"></div> -->
   
               <!-- <video class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover" autoplay muted loop playsinline style="object-fit: cover; z-index:0;">
                 <source src="img/Contactusbanner.mp4" type="video/mp4">
               </video> -->
-                <img class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover" src="img/contact_banner.png" alt="Image">          
+                <!-- <img class="position-absolute top-50 start-50 translate-middle w-100 h-100 object-fit-cover" src="img/contact_banner.png" alt="Image">          
            <div class="container py-5 position-relative" style="z-index:2;">
     <div class="row justify-content-center">
       <div class="col-lg-7">
@@ -128,7 +129,67 @@
                 </div>
             </div>
         </div>
+    </div> -->
+    <contact>
+    <div class="container-fluid quote mb-5 py-5 position-relative overflow-hidden">
+    <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+    <div class="container py-5 position-relative" style="z-index:2;">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
+            <h2 class="display-5 text-primary text-center mb-1">Contact Us</h2>
+            <p class="text-center mb-1">
+              <strong>📞 <a href="tel:+919825023094" style="color:inherit;">+91-9825023094</a></strong> &nbsp;|&nbsp;
+              <strong>✉️ <a href="mailto:avsarpartyplot2001@gmail.com" style="color:inherit;">avsrpartyplot2001@gmail.com</a></strong>
+            </p>
+            <h6 class="display-6 text-center mb-4">We're just a message away</h6>
+            <form id="contactForm" novalidate=""> 
+              <div class="row g-3"> 
+                <div class="col-sm-6"> 
+                  <div class="form-floating"> 
+                    <input type="text" class="form-control bg-light border-0" id="gname" name="from_name" placeholder="Your Name" required=""> 
+                    <label for="gname">Your Name</label> 
+                  </div> 
+                </div> 
+                <div class="col-sm-6"> 
+                  <div class="form-floating"> 
+                    <input type="email" class="form-control bg-light border-0" id="gmail" name="from_email" placeholder="Your Email" required=""> 
+                    <label for="gmail">Your Email</label> 
+                  </div> 
+                </div> 
+                <div class="col-sm-6"> 
+                  <div class="form-floating"> 
+                    <input type="tel" class="form-control bg-light border-0" id="cname" name="from_mobile" placeholder="Your Mobile" required=""> 
+                    <label for="cname">Your Mobile</label> 
+                  </div> 
+                </div> 
+                <div class="col-sm-6">
+                   <div class="form-floating"> 
+                    <input type="text"
+               class="form-control bg-light border-0"
+               id="serviceType"
+               name="service_type"
+               placeholder="Service Type">
+        <label for="serviceType">Service Type</label>
+                  </div> 
+                </div> 
+                <div class="col-12">
+                   <div class="form-floating">
+                     <textarea class="form-control bg-light border-0" placeholder="Leave a message here" id="message" name="message" style="height:100px"></textarea> 
+                     <label for="message">Message</label> 
+                    </div> 
+                  </div> 
+                  <div class="col-12 text-center"> 
+                    <button class="btn btn-primary py-3 px-4" type="submit">Submit Now</button> 
+                  </div> 
+                </div> 
+              </form>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  </contact>
     <!-- Contact End -->
 
 
@@ -183,6 +244,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
 </body>
 
 </html>
