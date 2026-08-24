@@ -8,10 +8,8 @@ $(document).ready(function(){
     // Function to initialize Magnific Popup for all items in current filter
     function initPopup(filterSelector) {
         // Destroy previous instance
-        if ($.magnificPopup.instance) {
-            $.magnificPopup.instance.close(); // Close if open
-            $('.gallery-grid-items').magnificPopup('destroy');
-        }
+         $('.gallery-grid-items').magnificPopup('destroy');
+
 
         // Initialize on all items matching the filter
         $('.gallery-grid-items').magnificPopup({
