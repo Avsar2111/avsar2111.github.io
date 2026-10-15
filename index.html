@@ -749,64 +749,141 @@
   <!-- ===================== END SERVICES ===================== -->
 
   <!-- ===================== CONTACT FORM ===================== -->
-  <div class="container-fluid quote mb-5 py-5 position-relative overflow-hidden">
+
+<div class="container-fluid quote mb-5 py-5 position-relative">
+
+    <!-- Background overlay -->
     <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
-    <div class="container py-5 position-relative" style="z-index:2;">
-      <div class="row justify-content-center">
-        <div class="col-lg-7">
-          <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
-            <h2 class="display-5 text-primary text-center mb-1">Contact Us</h2>
-            <p class="text-center mb-1">
-              <strong>📞 <a href="tel:+919825023094" style="color:inherit;">+91-9825023094</a></strong> &nbsp;|&nbsp;
-              <strong>✉️ <a href="mailto:avsarpartyplot2001@gmail.com" style="color:inherit;">avsrpartyplot2001@gmail.com</a></strong>
-            </p>
-            <h6 class="display-6 text-center mb-4">We're just a message away</h6>
-            <form id="contactForm" novalidate=""> 
-              <div class="row g-3"> 
-                <div class="col-sm-6"> 
-                  <div class="form-floating"> 
-                    <input type="text" class="form-control bg-light border-0" id="gname" name="from_name" placeholder="Your Name" required=""> 
-                    <label for="gname">Your Name</label> 
-                  </div> 
-                </div> 
-                <div class="col-sm-6"> 
-                  <div class="form-floating"> 
-                    <input type="email" class="form-control bg-light border-0" id="gmail" name="from_email" placeholder="Your Email" required=""> 
-                    <label for="gmail">Your Email</label> 
-                  </div> 
-                </div> 
-                <div class="col-sm-6"> 
-                  <div class="form-floating"> 
-                    <input type="tel" class="form-control bg-light border-0" id="cname" name="from_mobile" placeholder="Your Mobile" required=""> 
-                    <label for="cname">Your Mobile</label> 
-                  </div> 
-                </div> 
-                <div class="col-sm-6">
-                   <div class="form-floating"> 
-                    <input type="text"
-               class="form-control bg-light border-0"
-               id="serviceType"
-               name="service_type"
-               placeholder="Service Type">
-        <label for="serviceType">Service Type</label>
-                  </div> 
-                </div> 
-                <div class="col-12">
-                   <div class="form-floating">
-                     <textarea class="form-control bg-light border-0" placeholder="Leave a message here" id="message" name="message" style="height:100px"></textarea> 
-                     <label for="message">Message</label> 
-                    </div> 
-                  </div> 
-                  <div class="col-12 text-center"> 
-                    <button class="btn btn-primary py-3 px-4" type="submit">Submit Now</button> 
-                  </div> 
-                </div> 
-              </form>
-          </div>
+
+    <div class="container py-5 position-relative" style="z-index: 2;">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+
+               <!-- Added overflow-visible inline or via class to prevent clipping -->
+               <div class="bg-white rounded p-4 p-sm-5 wow fadeIn"
+                    data-wow-delay="0.5s"
+                    style="position: relative; z-index: 100; overflow: visible !important;">
+
+                    <h2 class="display-5 text-primary text-center mb-1">
+                        Contact Us
+                    </h2>
+
+                    <p class="text-center mb-1">
+                        <strong>
+                            📞 <a href="tel:+919825023094" style="color:inherit;">
+                                +91-9825023094
+                            </a>
+                        </strong>
+                        &nbsp;|&nbsp;
+                        <strong>
+                            ✉️ <a href="mailto:avsarpartyplot2001@gmail.com"
+                                  style="color:inherit;">
+                                avsrpartyplot2001@gmail.com
+                            </a>
+                        </strong>
+                    </p>
+
+                    <h6 class="display-6 text-center mb-4">
+                        We're just a message away
+                    </h6>
+
+                    <form id="contactForm" novalidate>
+                        <div class="row g-3">
+
+                            <!-- Name -->
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text"
+                                           class="form-control bg-light border-0"
+                                           id="gname"
+                                           name="from_name"
+                                           placeholder="Your Name"
+                                           required>
+                                    <label for="gname">Your Name</label>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="email"
+                                           class="form-control bg-light border-0"
+                                           id="gmail"
+                                           name="from_email"
+                                           placeholder="Your Email"
+                                           required>
+                                    <label for="gmail">Your Email</label>
+                                </div>
+                            </div>
+
+                            <!-- Mobile -->
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="tel"
+                                           class="form-control bg-light border-0"
+                                           id="cname"
+                                           name="from_mobile"
+                                           placeholder="Your Mobile"
+                                           required>
+                                    <label for="cname">Your Mobile</label>
+                                </div>
+                            </div>
+
+                            <!-- Service Type Dropdown -->
+                            <div class="col-sm-6">
+                                <div class="form-floating service-dropdown">
+                                    <select class="form-select bg-light border-0"
+                                            id="serviceType"
+                                            name="service_type"
+                                            required>
+                                        <option value="" selected disabled>
+                                            Choose an event
+                                        </option>
+                                        <option value="Wedding">Wedding</option>
+                                        <option value="Engagement">Engagement</option>
+                                        <option value="Reception">Wedding Reception</option>
+                                        <option value="Birthday Party">Birthday Party</option>
+                                        <option value="Anniversary">Anniversary</option>
+                                        <option value="Corporate Event">Corporate Event</option>
+                                        <option value="Baby Shower">Baby Shower</option>
+                                        <option value="Naming Ceremony">Naming Ceremony</option>
+                                        <option value="Family Get-Together">Family Get-Together</option>
+                                        <option value="Social Function">Social Function</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <label for="serviceType">Service Type</label>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control bg-light border-0"
+                                              placeholder="Leave a message here"
+                                              id="message"
+                                              name="message"
+                                              style="height: 120px;"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+
+                            <!-- Submit -->
+                            <div class="col-12 text-center">
+                                <button class="btn btn-primary py-3 px-4"
+                                        type="submit">
+                                    Submit Now
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
+
   <!-- ===================== END CONTACT FORM ===================== -->
 
   <!-- ===================== GALLERY ===================== -->

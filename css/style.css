@@ -37,8 +37,94 @@ h6,
 .fw-semi-bold {
     font-weight: 500 !important;
 }
+/* Allow the parent quote section to overflow */
+.quote {
+    position: relative;
+    overflow: visible !important;
+}
 
+/* Form container card */
+.quote .bg-white {
+    position: relative;
+    z-index: 100;
+    overflow: visible !important;
+}
 
+/* Service Dropdown Wrapper */
+#contactForm .service-dropdown {
+    position: relative;
+    z-index: 1050;
+}
+
+/* Hide native browser select element so it doesn't overlap/bleed through */
+#contactForm .service-dropdown select {
+    display: none !important;
+}
+
+/* Match input background and fix vertical alignment */
+#contactForm .service-dropdown .nice-select {
+    position: relative;
+    z-index: 1050;
+    width: 100% !important;
+    background-color: #f3eaeb !important; /* Matches your form's input background shade */
+    border: none !important;
+    height: 58px !important;
+    line-height: 58px !important;
+    display: flex !important;
+    align-items: center !important; /* Aligns text cleanly */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Ensure the inner current text box aligns properly */
+#contactForm .service-dropdown .nice-select .current {
+    line-height: normal !important;
+    display: block;
+    width: 100%;
+}
+
+/* Hide the dropdown list completely when closed */
+#contactForm .service-dropdown .nice-select:not(.open) .list {
+    display: none !important;
+}
+
+/* Show and position the list correctly ONLY when open */
+#contactForm .service-dropdown .nice-select.open {
+    z-index: 99999;
+}
+
+#contactForm .service-dropdown .nice-select.open .list {
+    display: block !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 100000;
+    background-color: #ffffff !important; /* Solid white background so background image/text won't show through */
+    max-height: 200px !important;         /* Restricts height above submit button */
+    overflow-y: auto !important;          /* Enables scrollbar for long list */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15) !important;
+    padding-left: 0 !important;
+    margin-top: 2px !important;
+}
+
+/* Remove default list bullet points and margins */
+#contactForm .service-dropdown .nice-select .list,
+#contactForm .service-dropdown .nice-select .option {
+    list-style: none !important;
+}
+
+#contactForm .service-dropdown .nice-select .option {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    color: #333333 !important;
+}
+
+#contactForm .service-dropdown .nice-select .option:hover,
+#contactForm .service-dropdown .nice-select .option.focus,
+#contactForm .service-dropdown .nice-select .option.selected.focus {
+    background-color: #f1f1f1 !important;
+}
 /*** Spinner ***/
 #spinner {
     opacity: 0;
